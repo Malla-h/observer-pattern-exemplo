@@ -1,37 +1,31 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Canal {
+public class Canal implements Sujeito{
     private String nome;
-    private final List<Inscrito> inscritos = new ArrayList<>();
+    private String ultimoVideo;
+    private final List<Observer> observer = new ArrayList<>();
 
     public Canal(String nome) {
         this.nome = nome;
     }
-
-    public String getNome() {
-        return nome;
+    
+    public void inscreverObservador(Observer o) {
+        observer.add(o);
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void desinscreverObservador(Observer o) {
+        observer.remove(o);
     }
 
-    public void inscreverUsuario(Inscrito u) {
-        inscritos.add(u);
-    }
-
-    public void desinscreverUsuario(Inscrito u) {
-        inscritos.remove(u);
-    }
-
-    private void notificar(String titulo, String nome) {
-        for (Inscrito inscrito : inscritos) {
+    public void notificarObservadores(String titulo, String nome) {
+        for (Observer inscrito : observer) {
             inscrito.receberNotificacao(titulo, nome);
         }
     }
 
     public void postarVideo(String titulo) {
-        notificar(titulo, nome);
+        this.ultimoVideo = titulo;
+        notificarObservadores(ultimoVideo, nome);
     }
 }

@@ -8,13 +8,11 @@ public class Main {
         Usuario carlos = new Usuario("Carlos", 1);
         Usuario diego = new Usuario("Diego", 2);
 
-        canalDeCulinaria.inscreverUsuario(joana);
-        canalDeCulinaria.inscreverUsuario(carlos);
+        canalDeCulinaria.inscreverObservador(joana);
+        canalDeCulinaria.inscreverObservador(carlos);
 
         canalDeCulinaria.postarVideo("Video de Culinaria!");
-        canalDeEntretenimento.postarVideo("Video de Entretenimento!");
-
-        
+        canalDeEntretenimento.postarVideo("Video de Entretenimento!");        
 
     }
 }
