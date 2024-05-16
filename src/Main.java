@@ -8,12 +8,13 @@ public class Main {
         Usuario carlos = new Usuario("Carlos", 1);
         Usuario diego = new Usuario("Diego", 2);
 
-        while (true) {
-            if (carlos.temNotificacoes(canalDeCulinaria)) {
-                // ...
-            }
-            // ...
-        }
+        canalDeCulinaria.inscreverUsuario(joana);
+        canalDeCulinaria.inscreverUsuario(carlos);
+
+        canalDeCulinaria.postarVideo("Video de Culinaria!");
+        canalDeEntretenimento.postarVideo("Video de Entretenimento!");
+
+        
 
     }
 }

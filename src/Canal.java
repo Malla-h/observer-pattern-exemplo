@@ -25,11 +25,13 @@ public class Canal {
         inscritos.remove(u);
     }
 
-    private void enviarNotificacaoParaTodosOsUsuarios(String titulo, String nome) {
-
+    private void notificar(String titulo, String nome) {
+        for (Inscrito inscrito : inscritos) {
+            inscrito.receberNotificacao(titulo, nome);
+        }
     }
 
     public void postarVideo(String titulo) {
-        enviarNotificacaoParaTodosOsUsuarios(titulo, nome);
+        notificar(titulo, nome);
     }
 }
