@@ -5,7 +5,7 @@ public class Usuario implements Observer {
     public Usuario(String nome, int id) {
         this.nome = nome;
         this.id = id;
-    }
+    }   
 
     @Override
     public void receberNotificacao(String tituloConteudo, String canal) {
