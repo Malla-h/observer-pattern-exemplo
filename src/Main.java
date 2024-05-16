@@ -10,6 +10,7 @@ public class Main {
 
         canalDeCulinaria.inscreverObservador(joana);
         canalDeCulinaria.inscreverObservador(carlos);
+        canalDeCulinaria.inscreverObservador(diego);
 
         canalDeCulinaria.postarVideo("Video de Culinaria!");
         canalDeEntretenimento.postarVideo("Video de Entretenimento!");        

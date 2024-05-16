@@ -23,6 +23,15 @@ public class Canal implements Sujeito{
             inscrito.receberNotificacao(titulo, nome);
         }
     }
+    
+    public String getNome() {
+        return this.nome;
+    }
+    
+    public String getUltimoVideo() {
+        return this.ultimoVideo;
+    }
+
 
     public void postarVideo(String titulo) {
         this.ultimoVideo = titulo;
